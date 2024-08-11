@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>le premier</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: 'montserrat';
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .stand {
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 100%;
+    }
+
+    .stand a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .stand>ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .stand>ul>li>a {
+
+        background: darkcyan;
+
+    }
+
+    .stand>ul>li>a:hover {
+        background: #eaeaff;
+        color: black;
+    }
+
+    .stand li {
+        float: left;
+        width: 25%;
+        text-align: center;
+        border-right: 1px solid #333;
+    }
+
+    .stand li:last-child {
+        border: none;
+    }
+
+    .stand .active {
+        background: #eaeaff;
+        color: black;
+    }
+
+    footer {
+        background-color: darkcyan;
+        padding: 25px;
+    }
+
+    .fac {
+        background-color: darkcyan;
+        color: black;
+        border-radius: 5px;
+        padding: 8px;
+        text-decoration: none;
+
+    }
+
+    table {
+        padding-left: 30%;
+    }
+
+    td {
+        background-color: #eaeaff;
+        font-size: 15px;
+        border-radius: 5;
+        text-align: left;
+        width: 250px;
+        height: 250px;
+        padding-left: 40px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #3c2aff;
+    }
+</style>
+
+<body>
+    <div>
+        <nav class="premier">
+            <div>
+                <img src="./images/logo.png" alt="logo université" width="50" height="50">
+            </div>
+            <div class="email">
+                <img src="./images/mail.png" alt="logo email" width="15" height="15">
+                <p>univ@toamasina.com</p>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <nav class="deuxieme">
+            <p></p>
+            <div class="menu">
+                <div>
+                    <img src="./images/home.png" alt="logo" width="15" height="15">
+                    <a href="">accueil</a>
+                </div>
+                <div>
+                    <img src="./images/list.png" alt="logo" width="15" height="15">
+                    <a href="">Historique</a>
+                </div>
+                <div>
+                    <img src="./images/telephone.png" alt="logo" width="15" height="15">
+                    <a href="">contact</a>
+                </div>
+                <div>
+                    <img src="./images/info.png" alt="logo" width="15" height="15">
+                    <a href="">A propos</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="fonts">
+        <div class="centre">
+            <div>
+                <h3>UNIVERSITE de BARIKADIMY</h3>
+                <div class="lien">
+                    <a href="">voir plus <img src="./images/plus.png" alt="" width="20" height="20"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="dropdown-item">
+            <div class="dropdown-title" onclick="toggleDropdown('mentionDropdown')">
+                <span>Mention</span>
+                <img src="./images/down.png" alt="icon" width="15" height="15">
+            </div>
+            <div class="dropdown-content" id="mentionDropdown">
+                <a href="#">Mention MIA</a>
+                <a href="#">Mention PC</a>
+                <a href="#">Mention gestion</a>
+                <a href="#">Mention Economie</a>
+                <a href="#">Mention Droit</a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <div class="dropdown-title" onclick="toggleDropdown('actualiteDropdown')">
+                <span>Actualité</span>
+                <img src="./images/down.png" alt="icon" width="15" height="15">
+            </div>
+            <div class="dropdown-content" id="actualiteDropdown">
+                <a href="#">Actualité Bourses</a>
+                <a href="#">Actualité Logement</a>
+                <a href="#">Actualité rentré scolaire</a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <div class="dropdown-title" onclick="toggleDropdown('faculteDropdown')">
+                <span>Faculté</span>
+                <img src="./images/down.png" alt="icon" width="15" height="15">
+            </div>
+            <div class="dropdown-content" id="faculteDropdown">
+                <a href="#">Faculté DEGS</a>
+                <a href="#">Faculté MEDECINE</a>
+                <a href="#">Faculté FST</a>
+                <a href="#">Faculté FLSH</a>
+
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <div class="dropdown-title" onclick="toggleDropdown('formationsDropdown')">
+                <span>Formations</span>
+                <img src="./images/down.png" alt="icon" width="15" height="15">
+            </div>
+            <div class="dropdown-content" id="formationsDropdown">
+                <a href="#">Option 1</a>
+                <a href="#">Option 2</a>
+                <a href="#">Option 3</a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <div class="dropdown-title" onclick="toggleDropdown('institutDropdown')">
+                <span>Institut</span>
+                <img src="./images/down.png" alt="icon" width="15" height="15">
+            </div>
+            <div class="dropdown-content" id="institutDropdown">
+                <a href="#">Institut ITPT</a>
+                <a href="#">Institut ISSEDD</a>
+                <a href="#">Institut ISPG</a>
+                <a href="#">Institut conficius</a>
+                <a href="#">Institut ISTRCE</a>
+                <a href="#">Institut ISTRALMA</a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <div class="dropdown-title" onclick="toggleDropdown('ecoleDropdown')">
+                <span>Ecole</span>
+                <img src="./images/down.png" alt="icon" width="15" height="15">
+            </div>
+            <div class="dropdown-content" id="ecoleDropdown">
+                <a href="#">Ecole ENS</a>
+                <a href="#">Ecole ESP</a>
+            </div>
+        </div>
+    </div>
+
+    <!---partie mention-->
+    <br>
+    <br>
+    <h1><i>MENTIONS EXISTANTS</i></h1>
+    <br>
+    <table>
+        <tr>
+            <td>
+                <b>ITPT</b>
+                <P>institut du tourisme, des patrimoines et des teritoires</P>
+                <img src="./images/ITPT (2).jpg" width="70px" height="70px">
+                <br>
+                <br>
+                <a class="fac" href="itpt.html">Voir plus</a>
+                <br>
+            </td>
+            <td>
+                <b>
+                    ISSEDD
+                </b>
+                <p>Institut Supérieure de sciences environnementale et développement Durable</p>
+                <br>
+                <img src="/images/issedd.jpg" width="70px" height="70px">
+                <br>
+                <br>
+                <a class="fac" href="issedd.html">Voir plus</a>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td>
+                <b>ISPG</b>
+                <P>Institut Supérieure Professionnel de Gestion</P>
+                <br>
+                <img src="./images/ispg.jpg" width="70px" height="70px">
+                <br>
+                <br>
+                <a class="fac" href="ispg.html">Voir plus</a>
+            </td>
+            <td>
+                <b>Confucius</b>
+                <P>Langue et culture chinois</P>
+                <br>
+                <img src="/images/confi.png" width="70px" height="70px">
+                <br>
+                <br>
+                <a class="fac" href="confi.html">Voir plus</a>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td>
+                <b>ISTRCE</b>
+                <P>Institut Supérieure de Technologie Régionale de la Cote-Est</P>
+                <br>
+                <img src="./images/istre.png" width="70px" height="70px">
+                <br>
+                <br>
+                <a class="fac" href="istre.html">Voir plus</a>
+            </td>
+            <td>
+                <b>ISTRALMA</b>
+                <P>Institut Supérieure de Technologie Régionale d'Alaotra Mangoro</P>
+                <br>
+                <img src="./images/istre.png" width="70px" height="70px">
+                <br>
+                <br>
+                <a class="fac" href="istra.html">Voir plus</a>
+            </td>
+        </tr>
+    </table>
+
+
+    <!---fin partie mention-->
+
+
+    <footer class="footer">
+        <div class="footer-column">
+            <h4>À propos</h4>
+            <p>Email: univ@toamasina.com</p>
+            <p>Adresse: Toamasina, Madagascar</p>
+        </div>
+        <div class="footer-column">
+            <h4>FAQ</h4>
+            <p><a href="#">Questions fréquentes</a></p>
+            <p><a href="#">Support</a></p>
+        </div>
+        <div class="footer-column">
+            <h4>Suivez-nous</h4>
+            <p><a href="#">Facebook</a></p>
+            <p><a href="#">Twitter</a></p>
+            <p><a href="#">Instagram</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDropdown(id) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                if (dropdowns[i].id !== id) {
+                    dropdowns[i].style.display = 'none';
+                }
+            }
+            var dropdown = document.getElementById(id);
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropdown-title, .dropdown-title *')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

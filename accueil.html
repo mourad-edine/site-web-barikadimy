@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>le premier</title>
+</head>
+<style>
+    .standard {
+        background-color: #f6f6f6;
+        border-style: groove;
+        border-radius: 5px;
+        font-size: 15px;
+        padding: 15px;
+        border: 5px;
+    }
+
+    #P1 {
+        padding-left: 200px;
+    }
+
+    .standards {
+        margin-top: 20px;
+        background-color: #f6f6f6;
+        border-radius: 5px;
+        font-size: 15px;
+        height: 200px;
+        padding-left: 15px;
+        border: 5px;
+
+    }
+
+    #p1 {
+        padding-left: 30px;
+        font-size: 20px;
+        color: #3c2aff;
+        padding-top: 20px;
+    }
+
+    .left {
+        float: right;
+        border-radius: 5px;
+
+    }
+
+    .right {
+        float: right;
+    }
+
+    .center {
+
+        padding-left: 100px;
+    }
+
+    .univ {
+        float: right;
+        border-radius: 3px;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    .two {
+        letter-spacing: 75px;
+        text-align: center;
+    }
+
+    .content {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    footer {
+        background-color: darkcyan;
+        padding: 25px;
+    }
+
+    * {
+        box-sizing: border-box;
+        font-family: 'montserrat';
+    }
+
+    .stand {
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 100%;
+    }
+
+    .stand a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        height: 50PX;
+        line-height: 50px;
+    }
+
+    .stand>ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .stand>ul>li>a {
+
+        background: darkcyan;
+
+    }
+
+    .stand>ul>li>a:hover {
+        background: #eaeaff;
+        color: black;
+    }
+
+    .stand li {
+        float: left;
+        width: 25%;
+        text-align: center;
+        border-right: 1px solid #333;
+    }
+
+    .stand li:last-child {
+        border: none;
+    }
+
+    .stand .active {
+        background: #eaeaff;
+        color: black;
+    }
+</style>
+<body>
+    <div>
+        <nav class="premier">
+            <div>
+                <img src="./images/logo.png" alt="logo université" width="50" height="50">
+            </div>
+            <div class="email">
+                <img src="./images/mail.png" alt="logo email" width="15" height="15">
+                <p>univ@toamasina.com</p>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <nav class="deuxieme" id="deuxieme">
+            <p></p>
+            <div class="menu">
+                <div>
+                    <img src="./images/home.png" alt="logo" width="15" height="15">
+                    <a href="">accueil</a>
+                </div>
+                <div>
+                    <img src="./images/list.png" alt="logo" width="15" height="15">
+                    <a href="">Historique</a>
+                </div>
+                <div>
+                    <img src="./images/telephone.png" alt="logo" width="15" height="15">
+                    <a href="contact.html">contact</a>
+                </div>
+                <div>
+                    <img src="./images/info.png" alt="logo" width="15" height="15">
+                    <a href="">A propos</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="fonts">
+        <div class="centre">
+            <div>
+                <h3>UNIVERSITE de BARIKADIMY</h3>
+                <div class="lien">
+                    <a href="mention.html">voir plus <img src="./images/plus.png" alt="" width="20" height="20"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="dropdown-item">
+            <div class="dropdown-title" onclick="toggleDropdown('mentionDropdown')">
+                <span>Mention</span>
+                <img src="./images/down.png" alt="icon" width="15" height="15">
+            </div>
+            <div class="dropdown-content" id="mentionDropdown">
+                <a href="MIA.html">Mention MIA</a>
+                <a href="PC.html">Mention PC</a>
+                <a href="GESTION.html">Mention gestion</a>
+                <a href="ECONOMIE.html">Mention Economie</a>
+                <a href="DROIT.html">Mention Droit</a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <div class="dropdown-title" onclick="toggleDropdown('actualiteDropdown')">
+                <span>Actualité</span>
+                <img src="./images/down.png" alt="icon" width="15" height="15">
+            </div>
+            <div class="dropdown-content" id="actualiteDropdown">
+                <a href="index.html">Actualité Bourses</a>
+                <a href="">Actualité Logement</a>
+                <a href="#">Actualité rentré scolaire</a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <div class="dropdown-title" onclick="toggleDropdown('faculteDropdown')">
+                <span>Faculté</span>
+                <img src="./images/down.png" alt="icon" width="15" height="15">
+            </div>
+            <div class="dropdown-content" id="faculteDropdown">
+                <a href="faculteDEG.html">Faculté DEGS</a>
+                <a href="faculteMED.html">Faculté MEDECINE</a>
+                <a href="faculteFST.html">Faculté FST</a>
+                <a href="faculteFLSH.html">Faculté FLSH</a>
+
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <div class="dropdown-title" onclick="toggleDropdown('formationsDropdown')">
+                <span>Formations</span>
+                <img src="./images/down.png" alt="icon" width="15" height="15">
+            </div>
+            <div class="dropdown-content" id="formationsDropdown">
+                <a href="#"></a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <div class="dropdown-title" onclick="toggleDropdown('institutDropdown')">
+                <span>Institut</span>
+                <img src="./images/down.png" alt="icon" width="15" height="15">
+            </div>
+            <div class="dropdown-content" id="institutDropdown">
+                <a href="institutITPT.html">Institut ITPT</a>
+                <a href="institutISSED.html">Institut ISSEDD</a>
+                <a href="institutISPG.html">Institut ISPG</a>
+                <a href="institutCONFICIUS.html">Institut conficius</a>
+                <a href="institutISTRCE.html">Institut ISTRCE</a>
+                <a href="institutISTRALMA.html">Institut ISTRALMA</a>
+            </div>
+        </div>
+        <div class="dropdown-item">
+            <div class="dropdown-title" onclick="toggleDropdown('ecoleDropdown')">
+                <span>Ecole</span>
+                <img src="./images/down.png" alt="icon" width="15" height="15">
+            </div>
+            <div class="dropdown-content" id="ecoleDropdown">
+                <a href="ecoleENS.html">Ecole ENS</a>
+                <a href="ecoleESP.html">Ecole ESP</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!---partie actuaité-->
+    <div style="margin: 40px;">
+        <div class="standard">
+            <img class="univ" src="./images/UNIV.png" width="150px" height="150px">
+            <p id="p1"><b><i>Historique</i></b></p>
+            <p class="center"><b>Université de Toamasina</b> est un établissement publique d'enseignement supérieur
+                situé à
+                Tamatave, plus grande ville portuaire de Madagascar, sur la cote Est de l'ile.</i></p>
+            <P class="center">Créé en septembre 1977, le centre universitaire régional de Toamasina a accédé au statut
+                d'Université autonome en 1989</P>
+        </div>
+        <br>
+        <div class="standard">
+            <P id="p1"><b><i>Historique des dirigeants</i></b></P>
+            <p class="center">Voici la liste des directeurs,recteurs et président suivant l'année de leur mandat:</p>
+            <ul id="P1">
+                <li>
+                    De 1977 à 1984: Norbert RANDRIAMIARINTSOA
+                </li>
+                <li>
+                    De 1984 à 1990: Emile TSIZARAINA
+                </li>
+                <li>
+                    De 1990 à 2002: Eugène MANGALAZA
+                </li>
+                <li>
+                    De 2002 à 2006:Roger RAJAOHARIVELO
+                </li>
+                <li>
+                    De 2006 à 2012: Gatien Prudent Horace
+                </li>
+                <li>
+                    De 2012 à 2019: Jérome VELO
+                </li>
+                <li>
+                    De 2019 à 2021: Joel RANDRIANANTENAINA
+                </li>
+            </ul>
+        </div>
+        <div class="standards">
+            <img class="left" src="./images/diny.jpg" width="150px" height="200px">
+            <p id="p1"><i><b>Le président de l'Université de Toamasina</b></i></p>
+            <div class="center">
+                <p>Actuellement, <b>Docteur Diny RAZANAKOLONA</b> est le president de l'Université depuis le 6 mai 2022.
+                </p>
+                <p>Il a soutenu publiquement son dossier d'HDR(Habilitation à Diriger des Recherches) intitulé"Inclusion
+                    financière et développement à Madagascar" le lundi 14 Novembre 2022.</p>
+                <p> Ce président a poursuivi ses études en sciences Economiques à l'Université de Toamasina. A présent,
+                    gradé de Professeur en sciences Economiques.</p>
+                <P> va de plus en plus contribuer à diriger des travaux de Recherches et appuyer les chercheurs surtout
+                    ceux
+                    de l'université de Toamasina.</p>
+            </div>
+        </div>
+        <br>
+        <div class="standard">
+            <img class="right" src="./images/etude.png" width="150px" height="150px">
+            <p id="p1"><i><b> Facultés, les Instituts et les écoles qui existent dans cet université</b></i></p>
+            <p class="center">Université de Toamasina est composée de quatre Facultés, deux écoles administratives et
+                six
+                Instituts</p>
+            <p class="center">Pour avoir plus d'information sur ces organisations des etudes , veuillez cliquer sur
+                multiples pages qui sont en haut en suivant leur nom</p>
+        </div>
+        <br>
+
+        <div class="standard">
+            <p class="content"><i>Partenaires officielles</i></p>
+            <P class="two">
+                <img src="./images/orange.png" width="80px" height="80px">
+                <img src="images/airtel.png" width="80px" height="80px">
+                <img src="images/smmc.png" width="80px" height="80px">
+                <img src="images/bmoi.png" width="80px" height="80px">
+            <p class="two">
+                <img src="images/bni.png" width="80px" height="80px">
+                <img src="images/societe.jpeg" width="80px" height="80px">
+                <img src="images/spat.png" width="80PX" height="80px">
+                <img src="images/rouen.png" width="80px" height="80px">
+            </p>
+            </P>
+        </div>
+    </div>
+
+
+
+    <!---fin partie actualité-->
+
+
+    <footer class="footer">
+        <div class="footer-column">
+            <h4>À propos</h4>
+            <p>Email: univ@toamasina.com</p>
+            <p>Adresse: Toamasina, Madagascar</p>
+        </div>
+        <div class="footer-column">
+            <h4>FAQ</h4>
+            <p><a href="#">Questions fréquentes</a></p>
+            <p><a href="#">Support</a></p>
+        </div>
+        <div class="footer-column">
+            <h4>Suivez-nous</h4>
+            <p><a href="#">Facebook</a></p>
+            <p><a href="#">Twitter</a></p>
+            <p><a href="#">Instagram</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDropdown(id) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                if (dropdowns[i].id !== id) {
+                    dropdowns[i].style.display = 'none';
+                }
+            }
+            var dropdown = document.getElementById(id);
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropdown-title, .dropdown-title *')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
